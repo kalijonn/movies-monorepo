@@ -1,0 +1,14 @@
+{
+	"name": "root",
+	"private": true,
+	"devDependencies": {
+		"lerna": "^3.22.1"
+	},
+	"scripts": {
+		"build:client": "cd packages/client && npm install && npm run build && cd ../..",
+		"build:server": "cd packages/server && npm install && npm run build && cd ../..",
+		"build": "npm run build:client && npm run build:server",
+		"start": "node ./packages/build/index.js",
+		"bootstrap": "lerna bootstrap"
+	}
+}
